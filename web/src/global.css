@@ -43,6 +43,11 @@ body, input, textarea, button{
     max-height: none;
 }
 
+input:focus{
+    outline: transparent;
+    box-shadow: 0 0 0 0 var(--gray-400);
+}
+
 @media(max-width: 768px){
     html{
         font-size: 87.5%;
