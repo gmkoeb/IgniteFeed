@@ -1,7 +1,11 @@
 import { PencilSimpleLine } from 'phosphor-react'
 import { Avatar } from './Avatar'
+import { useContext } from 'react'
+import { AuthContext } from '../context/authentication'
 
 export function Sidebar(){
+    const logout = useContext(AuthContext).logout
+
     return(
         <aside className="rounded-lg bg-[#202024] overflow-hidden">
             <img 
@@ -19,6 +23,7 @@ export function Sidebar(){
             <footer className="border-t-2 border-solid border-[#323238] mt-6 py-6 px-8">
                 <a className="bg-transparent text-[#00875f] border-[#00875f] border-2 border-solid rounded-lg h-12 py-0 px-6 font-bold flex items-center justify-center no-underline gap-3 transition hover:bg-[#00875f] hover:text-white duration-300" href=""> <PencilSimpleLine size={16}/> Editar seu perfil</a>
             </footer>
+            <button className='bg-gray' onClick={logout}>Logout</button>
         </aside>
     )
 }

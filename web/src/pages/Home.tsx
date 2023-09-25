@@ -41,7 +41,6 @@ const posts: PostProps[] = [
 
 
 function Home() {
- 
   return (
     <div>
       <Header />
